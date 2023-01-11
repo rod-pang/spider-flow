@@ -133,7 +133,7 @@ public class SpiderFlowService extends ServiceImpl<SpiderFlowMapper, SpiderFlow>
 
 	public void stop(String id){
 		sfMapper.resetSpiderStatus(id,"0");
-		sfMapper.resetNextExecuteTime(id);
+		sfMapper.resetNextExecuteTimeById(id);
 		spiderJobManager.remove(id);
 	}
 
